@@ -1,0 +1,2 @@
+1. login and logout
+2. avatar icons using dicebear
