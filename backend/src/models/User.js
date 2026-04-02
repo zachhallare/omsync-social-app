@@ -26,8 +26,8 @@ const userSchema = new mongoose.Schema(
             default: ""
         },
         location: {
-            type: Boolean,
-            default: false
+            type: String,
+            default: ""
         },
         isOnboarded: {
             type: Boolean,
