@@ -118,15 +118,14 @@ export async function onboard(req, res) {
     try {
         const userId = req.user._id;
 
-        const { fullName, bio, location } = req.body;
+        const { fullName, bio } = req.body;
 
-        if (!fullName || !bio || !location) {
+        if (!fullName || !bio) {
             return res.status(400).json({
                 message: "All fields are required",
                 missingFields: [
                     !fullName && "fullName",
-                    !bio && "bio",
-                    !location && "location"
+                    !bio && "bio"
                 ].filter(Boolean)
             });
         }

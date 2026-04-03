@@ -25,10 +25,6 @@ const userSchema = new mongoose.Schema(
             type: String,
             default: ""
         },
-        location: {
-            type: String,
-            default: ""
-        },
         isOnboarded: {
             type: Boolean,
             default: false
@@ -40,7 +36,9 @@ const userSchema = new mongoose.Schema(
             },
         ],
     },
-    { timestamps: true }
+    {
+        timestamps: true
+    }
 );
 
 // for password hashing.
