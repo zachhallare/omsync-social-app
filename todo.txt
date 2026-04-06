@@ -1,3 +1,6 @@
 - avatar icons using dicebear
 - add mobile number (for otp later on/forget password)
 
+bonus feature.
+- forget-password in auth.route feature
+- send-reset-password-email in auth.route feature
