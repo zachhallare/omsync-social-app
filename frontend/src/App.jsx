@@ -7,7 +7,7 @@ import ChatPage from "./pages/ChatPage.jsx";
 import OnboardingPage from "./pages/OnboardingPage.jsx";
 
 import { Route, Routes, Navigate } from "react-router";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
 import { axiosInstance } from "./lib/axios.js";
 
@@ -23,14 +23,7 @@ const App = () => {
     retry: false,   // auth check
   });
 
-  // Loading animation.
-  if (isLoading) {
-    return (
-      <div className="h-screen flex justify-center items-center">
-        <span className="loading loading-spinner loading-lg"></span>
-      </div>
-    );
-  }
+
 
   const authUser = authData?.user;
 
