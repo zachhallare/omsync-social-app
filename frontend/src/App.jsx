@@ -11,6 +11,7 @@ import OnboardingPage from "./pages/OnboardingPage.jsx";
 
 import PageLoader from "./components/PageLoader.jsx";
 import useAuthUser from "./hooks/useAuthUser.js";
+import Layout from "./components/Layout.jsx";
 
 
 const App = () => {
@@ -25,8 +26,12 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={isAuthenticated && isOnboarded ? (<HomePage />) :
-            (<Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />)}
+          element={
+            isAuthenticated && isOnboarded ? (
+              <Layout showSidebar={true}>
+                <HomePage />
+              </Layout>) :
+              (<Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />)}
         />
 
         <Route
