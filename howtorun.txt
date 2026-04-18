@@ -1,5 +1,0 @@
-run backend: npm run dev
-
-new terminal
-
-run frontend: npm run dev
